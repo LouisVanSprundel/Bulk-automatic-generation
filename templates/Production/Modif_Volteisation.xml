@@ -1,0 +1,242 @@
+	<request xsi:type="spml:ModifyRequest">
+			<version>SUBSCRIBER_v10</version>
+			<objectclass>Subscriber</objectclass>
+			<identifier alias="imsi">[IMSI]</identifier>
+
+<!-- 
+Suppression des Call Forward
+-->
+			<modification name="hlr/cfd" operation="remove">
+			</modification>
+			<modification name="hlr/cfu" operation="remove">
+			</modification>
+			<modification name="hlr/cfnrc" operation="remove">
+			</modification>
+			<modification name="hlr/cfb" operation="remove">
+			</modification>
+			<modification name="hlr/cfnry" operation="remove">
+			</modification>
+			<modification name="hlr/mpty" operation="remove">
+			</modification>
+		
+			<modification operation="add" scope="uniqueTypeMapping">
+				<valueObject xsi:type="subscriber:PDPContext">
+					<id>7</id>
+					<qosProfile>QOSI3601</qosProfile>
+					<refPdpContextName>6001</refPdpContextName>
+				</valueObject>
+			</modification>
+			<modification operation="add" scope="uniqueTypeMapping">
+                                <valueObject xsi:type="subscriber:PDPContext">
+                                        <id>8</id>
+                                        <qosProfile>QOSI3601</qosProfile>
+                                        <refPdpContextName>6012</refPdpContextName>
+                                </valueObject>
+                        </modification>
+			<modification operation="add" scope="uniqueTypeMapping">
+                                <valueObject xsi:type="subscriber:PDPContext">
+                                        <id>9</id>
+                                        <qosProfile>QOSI3601</qosProfile>
+                                        <refPdpContextName>6013</refPdpContextName>
+                                </valueObject>
+                        </modification>
+			<modification operation="set" scope="uniqueTypeMapping">
+				<match xsi:type="subscriber:TCSI">
+					<operatorServiceName>27SHR</operatorServiceName>
+				</match>
+				<valueObject xsi:type="subscriber:TCSI">
+					<operatorServiceName>135VOLTE</operatorServiceName>
+					<csiState>1</csiState>
+					<csiNotify>2</csiNotify>
+				</valueObject>
+			</modification>
+			<modification operation="set" scope="uniqueTypeMapping">
+				<valueObject xsi:type="subscriber:EPS">
+					<sessionTransferNumber>33654490100</sessionTransferNumber>
+					<accessAPNEnabled>true</accessAPNEnabled>
+				</valueObject>
+			</modification>
+			<modification operation="add" scope="uniqueTypeMapping">
+				<valueObject xsi:type="subscriber:EPSPdnContext">
+					<apn>ims</apn>
+					<contextId>7</contextId>
+					<type>ipv4</type>
+					<pdnGwDynamicAllocation>true</pdnGwDynamicAllocation>
+					<vplmnAddressAllowed>false</vplmnAddressAllowed>
+					<maxBandwidthUp>384000</maxBandwidthUp>
+					<maxBandwidthDown>384000</maxBandwidthDown>
+					<qos>56DE1</qos>
+					<pdnContextBlocking>
+						<flagAPNBlockedOverS6a>false</flagAPNBlockedOverS6a>
+						<flagAPNBlockedOverSWx>false</flagAPNBlockedOverSWx>
+					</pdnContextBlocking>
+				</valueObject>
+			</modification>
+			<modification operation="add" scope="uniqueTypeMapping">
+                                <valueObject xsi:type="subscriber:EPSPdnContext">
+                                        <apn>ims2</apn>
+                                        <contextId>8</contextId>
+                                        <type>ipv4</type>
+                                        <pdnGwDynamicAllocation>true</pdnGwDynamicAllocation>
+                                        <vplmnAddressAllowed>false</vplmnAddressAllowed>
+                                        <maxBandwidthUp>384000</maxBandwidthUp>
+                                        <maxBandwidthDown>384000</maxBandwidthDown>
+                                        <qos>56DE1</qos>
+                                        <pdnContextBlocking>
+                                                <flagAPNBlockedOverS6a>false</flagAPNBlockedOverS6a>
+                                                <flagAPNBlockedOverSWx>false</flagAPNBlockedOverSWx>
+                                        </pdnContextBlocking>
+                                </valueObject>
+                        </modification>
+			<modification operation="add" scope="uniqueTypeMapping">
+                                <valueObject xsi:type="subscriber:EPSPdnContext">
+                                        <apn>ims3</apn>
+                                        <contextId>9</contextId>
+                                        <type>ipv4</type>
+                                        <pdnGwDynamicAllocation>true</pdnGwDynamicAllocation>
+                                        <vplmnAddressAllowed>false</vplmnAddressAllowed>
+                                        <maxBandwidthUp>384000</maxBandwidthUp>
+                                        <maxBandwidthDown>384000</maxBandwidthDown>
+                                        <qos>56DE1</qos>
+                                        <pdnContextBlocking>
+                                                <flagAPNBlockedOverS6a>false</flagAPNBlockedOverS6a>
+                                                <flagAPNBlockedOverSWx>false</flagAPNBlockedOverSWx>
+                                        </pdnContextBlocking>
+                                </valueObject>
+                        </modification>
+			<modification operation="add" scope="uniqueTypeMapping">
+				<valueObject xsi:type="subscriber:EPSPdnContext">
+					<apn>sos</apn>
+					<contextId>10</contextId>
+					<type>ipv4</type>
+					<pdnGwDynamicAllocation>true</pdnGwDynamicAllocation>
+					<vplmnAddressAllowed>false</vplmnAddressAllowed>
+					<maxBandwidthUp>384000</maxBandwidthUp>
+					<maxBandwidthDown>384000</maxBandwidthDown>
+					<qos>86DD182</qos>
+					<pdnContextBlocking>
+						<flagAPNBlockedOverS6a>false</flagAPNBlockedOverS6a>
+						<flagAPNBlockedOverSWx>false</flagAPNBlockedOverSWx>
+					</pdnContextBlocking>
+				</valueObject>
+			</modification>
+			<modification operation="add" scope="uniqueTypeMapping">
+				<valueObject xsi:type="subscriber:EPSPdnContext">
+					<apn>vowifiorange</apn>
+					<contextId>11</contextId>
+					<type>ipv4</type>
+					<pdnGwDynamicAllocation>true</pdnGwDynamicAllocation>
+					<vplmnAddressAllowed>false</vplmnAddressAllowed>
+					<maxBandwidthUp>150000000</maxBandwidthUp>
+					<maxBandwidthDown>600000000</maxBandwidthDown>
+					<qos>86DD181</qos>
+					<pdnContextBlocking>
+						<flagAPNBlockedOverS6a>true</flagAPNBlockedOverS6a>
+						<flagAPNBlockedOverSWx>false</flagAPNBlockedOverSWx>
+					</pdnContextBlocking>
+				</valueObject>
+			</modification>
+			
+			<modification operation="addorset">
+				<valueObject xsi:type="subscriber:HSS">
+					<subscriptionId>1</subscriptionId>
+					<profileType>normal</profileType>
+					<adminBlocked>false</adminBlocked>
+					<defaultScscfRequired>true</defaultScscfRequired>
+					<ccfPrimary>prims-cgf-refa-expe.reseau.francetelecom.fr</ccfPrimary>
+					<privateUserId>
+						<privateUserId>[IMSI]@ims.mnc001.mcc208.3gppnetwork.org</privateUserId>
+						<provisionedImsi>
+							<provisionedImsi>[IMSI]</provisionedImsi>
+						</provisionedImsi>
+						<msisdn>[MSISDN]</msisdn>
+						<preferredAuthenticationScheme>aka</preferredAuthenticationScheme>
+					</privateUserId>
+					<implicitRegisteredSet>
+						<irsId>1</irsId>
+						<provisionedPrivateId>[IMSI]@ims.mnc001.mcc208.3gppnetwork.org</provisionedPrivateId>
+					</implicitRegisteredSet>
+					<publicUserId>
+						<originalPublicUserId>sip:+[MSISDN]@ims.mnc001.mcc208.3gppnetwork.org</originalPublicUserId>
+						<barringIndication>false</barringIndication>
+						<defaultIndication>true</defaultIndication>
+						<serviceProfileName>4</serviceProfileName>
+						<irsId>1</irsId>
+						<aliasId>VolteVoWIFI</aliasId>
+					</publicUserId>
+					<publicUserId>
+						<originalPublicUserId>tel:+[MSISDN]</originalPublicUserId>
+						<barringIndication>false</barringIndication>
+						<defaultIndication>false</defaultIndication>
+						<serviceProfileName>4</serviceProfileName>
+						<irsId>1</irsId>
+						<aliasId>VolteVoWIFI</aliasId>
+					</publicUserId>
+					<publicUserId>
+						<originalPublicUserId>sip:[IMSI]@ims.mnc001.mcc208.3gppnetwork.org</originalPublicUserId>
+						<barringIndication>true</barringIndication>
+						<defaultIndication>false</defaultIndication>
+						<serviceProfileName>4</serviceProfileName>
+						<irsId>1</irsId>
+						<aliasId>VolteVoWIFI</aliasId>
+					</publicUserId>
+					<serviceProfile>
+						<profileName>4</profileName>
+						<mandatoryCapability>
+							<mandatoryCapability>1</mandatoryCapability>
+						</mandatoryCapability>
+						<globalFilterId>
+							<globalFilterId>1</globalFilterId>
+						</globalFilterId>
+						<globalFilterId>
+							<globalFilterId>2</globalFilterId>
+						</globalFilterId>
+						<globalFilterId>
+							<globalFilterId>3</globalFilterId>
+						</globalFilterId>
+						<globalFilterId>
+							<globalFilterId>4</globalFilterId>
+						</globalFilterId>
+						<globalFilterId>
+							<globalFilterId>5</globalFilterId>
+						</globalFilterId>
+						<globalFilterId>
+							<globalFilterId>6</globalFilterId>
+						</globalFilterId>
+						<globalFilterId>
+							<globalFilterId>7</globalFilterId>
+						</globalFilterId>
+						<globalFilterId>
+							<globalFilterId>8</globalFilterId>
+						</globalFilterId>
+						<globalFilterId>
+							<globalFilterId>9</globalFilterId>
+						</globalFilterId>
+						<globalFilterId>
+							<globalFilterId>10</globalFilterId>
+						</globalFilterId>
+						<subscribedMediaProfileID>
+							<sessionReleasePolicy>deregisterForcedSessionRelease</sessionReleasePolicy>
+							<forkingPolicy>noForking</forkingPolicy>
+						</subscribedMediaProfileID>
+					</serviceProfile>
+					<aliasGroup>
+						<aliasId>VolteVoWIFI</aliasId>
+						<serviceProfileName>4</serviceProfileName>
+						<irsId>1</irsId>
+					</aliasGroup>
+					<aliasRepositoryData>
+						<serviceIndId>MMTEL-Custom-Services</serviceIndId>
+						<version>0</version>
+						<asData>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;mmtelCustomServices xsi:noNamespaceSchemaLocation="MMTEL-CustomServices.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;extIMSI&gt;[IMSI]&lt;/extIMSI&gt;&lt;extCFD&gt;&lt;cfdforCFBActive&gt;true&lt;/cfdforCFBActive&gt;&lt;cfdFTNOforCFB&gt;+33654185408&lt;/cfdFTNOforCFB&gt;&lt;cfdFTNOforCFBType&gt;145&lt;/cfdFTNOforCFBType&gt;&lt;cfdforCFNRYActive&gt;true&lt;/cfdforCFNRYActive&gt;&lt;cfdFTNOforCFNRY&gt;+33654185408&lt;/cfdFTNOforCFNRY&gt;&lt;cfdFTNOforCFNRYType&gt;145&lt;/cfdFTNOforCFNRYType&gt;&lt;cfdforCFNRCActive&gt;true&lt;/cfdforCFNRCActive&gt;&lt;cfdFTNOforCFNRC&gt;+33654185408&lt;/cfdFTNOforCFNRC&gt;&lt;cfdFTNOforCFNRCType&gt;145&lt;/cfdFTNOforCFNRCType&gt;&lt;cfdServAvail&gt;1&lt;/cfdServAvail&gt;&lt;/extCFD&gt;&lt;/mmtelCustomServices&gt;</asData>
+						<aliasId>VolteVoWIFI</aliasId>
+					</aliasRepositoryData>
+					<aliasRepositoryData>
+						<serviceIndId>MMTEL-Services</serviceIndId>
+						<version>0</version>
+						<asData>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;MMTelServices xmlns="http://uri.etsi.org/ngn/params/xml/simservs/xcap" xmlns:ss="http://uri.etsi.org/ngn/params/xml/simservs/xcap" xmlns:cp="urn:ietf:params:xml:ns:common-policy" xmlns:ocp="urn:oma:xml:xdm:common-policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://uri.etsi.org/ngn/params/xml/simservs/xcap MMTEL-Services.xsd"&gt;&lt;complete-originating-identity-presentation&gt;&lt;originating-identity-presentation active="true"/&gt;&lt;operator-originating-identity-presentation authorized="true"&gt;&lt;restriction-override&gt;override-not-active&lt;/restriction-override&gt;&lt;/operator-originating-identity-presentation&gt;&lt;/complete-originating-identity-presentation&gt;&lt;complete-originating-identity-restriction&gt;&lt;originating-identity-presentation-restriction active="true"&gt;&lt;default-behaviour&gt;presentation-not-restricted&lt;/default-behaviour&gt;&lt;/originating-identity-presentation-restriction&gt;&lt;operator-originating-identity-presentation-restriction authorized="true"&gt;&lt;mode&gt;temporary&lt;/mode&gt;&lt;/operator-originating-identity-presentation-restriction&gt;&lt;/complete-originating-identity-restriction&gt;&lt;complete-communication-diversion&gt;&lt;communication-diversion active="true"&gt;&lt;cp:ruleset&gt;&lt;cp:rule id="CFB"&gt;&lt;cp:conditions&gt;&lt;busy/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;forward-to&gt;&lt;target&gt;tel:+33654185408&lt;/target&gt;&lt;/forward-to&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;cp:rule id="CFNRy"&gt;&lt;cp:conditions&gt;&lt;no-answer/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;forward-to&gt;&lt;target&gt;tel:+33654185408&lt;/target&gt;&lt;/forward-to&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;cp:rule id="CFNRc"&gt;&lt;cp:conditions&gt;&lt;not-reachable/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;forward-to&gt;&lt;target&gt;tel:+33654185408&lt;/target&gt;&lt;/forward-to&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;cp:rule id="CFNL"&gt;&lt;cp:conditions&gt;&lt;not-registered/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;forward-to&gt;&lt;target&gt;tel:+33654185408&lt;/target&gt;&lt;/forward-to&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;cp:rule id="CFU"&gt;&lt;cp:conditions&gt;&lt;rule-deactivated/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;forward-to&gt;&lt;target&gt;tel:+33654185408&lt;/target&gt;&lt;/forward-to&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;/cp:ruleset&gt;&lt;/communication-diversion&gt;&lt;/complete-communication-diversion&gt;&lt;complete-communication-waiting&gt;&lt;communication-waiting active="true"/&gt;&lt;/complete-communication-waiting&gt;&lt;complete-communication-hold&gt;&lt;operator-communication-hold authorized="true"/&gt;&lt;/complete-communication-hold&gt;&lt;complete-communication-barring&gt;&lt;incoming-communication-barring active="true"&gt;&lt;cp:ruleset&gt;&lt;cp:rule id="BAIC"&gt;&lt;cp:conditions&gt;&lt;rule-deactivated/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;allow&gt;false&lt;/allow&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;cp:rule id="BICROAM"&gt;&lt;cp:conditions&gt;&lt;roaming/&gt;&lt;rule-deactivated/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;allow&gt;false&lt;/allow&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;/cp:ruleset&gt;&lt;/incoming-communication-barring&gt;&lt;outgoing-communication-barring active="true"&gt;&lt;cp:ruleset&gt;&lt;cp:rule id="BAOC"&gt;&lt;cp:conditions&gt;&lt;rule-deactivated/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;allow&gt;false&lt;/allow&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;cp:rule id="BOIC"&gt;&lt;cp:conditions&gt;&lt;international/&gt;&lt;rule-deactivated/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;allow&gt;false&lt;/allow&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;cp:rule id="BOICexHC"&gt;&lt;cp:conditions&gt;&lt;international-exHC/&gt;&lt;rule-deactivated/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;allow&gt;false&lt;/allow&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;/cp:ruleset&gt;&lt;/outgoing-communication-barring&gt;&lt;/complete-communication-barring&gt;&lt;complete-conference&gt;&lt;operator-conference authorized="true"/&gt;&lt;/complete-conference&gt;&lt;/MMTelServices&gt;</asData>
+						<aliasId>VolteVoWIFI</aliasId>
+					</aliasRepositoryData>
+				</valueObject>
+			</modification>
+	</request>

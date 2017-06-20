@@ -1,0 +1,31 @@
+	<request xsi:type="spml:ModifyRequest">
+		<version>SUBSCRIBER_v10</version>
+		<objectclass>Subscriber</objectclass>
+		<identifier>[UIDMERE]</identifier>
+		
+		<modification operation="remove" name="hlr/mpty">
+		</modification>
+		
+		<modification operation="set">
+			<match xsi:type="subscriber:AliasRepositoryData">
+				<serviceIndId>MMTEL-Custom-Services</serviceIndId>
+			</match>
+			<valueObject xsi:type="subscriber:AliasRepositoryData">
+				<serviceIndId>MMTEL-Custom-Services</serviceIndId>
+				<asData>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;mmtelCustomServices xsi:noNamespaceSchemaLocation="MMTEL-CustomServices.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;extIMSI&gt;[IMSIMERE]&lt;/extIMSI&gt;&lt;extCFD&gt;&lt;cfdforCFBActive&gt;true&lt;/cfdforCFBActive&gt;&lt;cfdFTNOforCFB&gt;+33654185408&lt;/cfdFTNOforCFB&gt;&lt;cfdFTNOforCFBType&gt;145&lt;/cfdFTNOforCFBType&gt;&lt;cfdforCFNRYActive&gt;true&lt;/cfdforCFNRYActive&gt;&lt;cfdFTNOforCFNRY&gt;+33654185408&lt;/cfdFTNOforCFNRY&gt;&lt;cfdFTNOforCFNRYType&gt;145&lt;/cfdFTNOforCFNRYType&gt;&lt;cfdforCFNRCActive&gt;true&lt;/cfdforCFNRCActive&gt;&lt;cfdFTNOforCFNRC&gt;+33654185408&lt;/cfdFTNOforCFNRC&gt;&lt;cfdFTNOforCFNRCType&gt;145&lt;/cfdFTNOforCFNRCType&gt;&lt;cfdServAvail&gt;1&lt;/cfdServAvail&gt;&lt;/extCFD&gt;&lt;multisim&gt;&lt;multisim-device-list&gt;&lt;multisim-device&gt;&lt;deviceNum&gt;0&lt;/deviceNum&gt;&lt;msisdn&gt;[MSISDNMERE]&lt;/msisdn&gt;&lt;imsi&gt;[IMSIMERE]&lt;/imsi&gt;&lt;impi&gt;[IMSIMERE]@ims.mnc001.mcc208.3gppnetwork.org&lt;/impi&gt;&lt;/multisim-device&gt;&lt;multisim-device&gt;&lt;deviceNum&gt;1&lt;/deviceNum&gt;&lt;msisdn&gt;[MSISDNFILLE]&lt;/msisdn&gt;&lt;imsi&gt;[IMSIFILLE]&lt;/imsi&gt;&lt;impi&gt;[IMSIFILLE]@ims.mnc001.mcc208.3gppnetwork.org&lt;/impi&gt;&lt;/multisim-device&gt;&lt;/multisim-device-list&gt;&lt;/multisim&gt;&lt;/mmtelCustomServices&gt;</asData>
+				<aliasId>VoLTEVoWifiMultisim1</aliasId>
+			</valueObject>
+		</modification>
+		
+		<modification operation="set">
+			<match xsi:type="subscriber:AliasRepositoryData">
+				<serviceIndId>MMTEL-Services</serviceIndId>
+			</match>
+			<valueObject xsi:type="subscriber:AliasRepositoryData">
+				<serviceIndId>MMTEL-Services</serviceIndId>
+				<asData>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;MMTelServices xmlns="http://uri.etsi.org/ngn/params/xml/simservs/xcap" xmlns:ss="http://uri.etsi.org/ngn/params/xml/simservs/xcap" xmlns:cp="urn:ietf:params:xml:ns:common-policy" xmlns:ocp="urn:oma:xml:xdm:common-policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://uri.etsi.org/ngn/params/xml/simservs/xcap MMTEL-Services.xsd"&gt;&lt;complete-originating-identity-presentation&gt;&lt;originating-identity-presentation active="true"/&gt;&lt;operator-originating-identity-presentation authorized="true"&gt;&lt;restriction-override&gt;override-not-active&lt;/restriction-override&gt;&lt;/operator-originating-identity-presentation&gt;&lt;/complete-originating-identity-presentation&gt;&lt;complete-originating-identity-restriction&gt;&lt;originating-identity-presentation-restriction active="true"&gt;&lt;default-behaviour&gt;presentation-not-restricted&lt;/default-behaviour&gt;&lt;/originating-identity-presentation-restriction&gt;&lt;operator-originating-identity-presentation-restriction authorized="true"&gt;&lt;mode&gt;temporary&lt;/mode&gt;&lt;/operator-originating-identity-presentation-restriction&gt;&lt;/complete-originating-identity-restriction&gt;&lt;complete-communication-diversion&gt;&lt;communication-diversion active="true"&gt;&lt;cp:ruleset&gt;&lt;cp:rule id="CFB"&gt;&lt;cp:conditions&gt;&lt;busy/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;forward-to&gt;&lt;target&gt;tel:+33654185408&lt;/target&gt;&lt;/forward-to&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;cp:rule id="CFNRy"&gt;&lt;cp:conditions&gt;&lt;no-answer/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;forward-to&gt;&lt;target&gt;tel:+33654185408&lt;/target&gt;&lt;/forward-to&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;cp:rule id="CFNRc"&gt;&lt;cp:conditions&gt;&lt;not-reachable/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;forward-to&gt;&lt;target&gt;tel:+33654185408&lt;/target&gt;&lt;/forward-to&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;cp:rule id="CFU"&gt;&lt;cp:conditions&gt;&lt;rule-deactivated/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;forward-to&gt;&lt;target&gt;tel:+33654185408&lt;/target&gt;&lt;/forward-to&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;/cp:ruleset&gt;&lt;/communication-diversion&gt;&lt;/complete-communication-diversion&gt;&lt;complete-communication-waiting&gt;&lt;communication-waiting active="true"/&gt;&lt;/complete-communication-waiting&gt;&lt;complete-communication-hold&gt;&lt;operator-communication-hold authorized="true"/&gt;&lt;/complete-communication-hold&gt;&lt;complete-communication-barring&gt;&lt;incoming-communication-barring active="true"&gt;&lt;cp:ruleset&gt;&lt;cp:rule id="BAIC"&gt;&lt;cp:conditions&gt;&lt;rule-deactivated/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;allow&gt;false&lt;/allow&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;cp:rule id="BICROAM"&gt;&lt;cp:conditions&gt;&lt;roaming/&gt;&lt;rule-deactivated/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;allow&gt;false&lt;/allow&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;/cp:ruleset&gt;&lt;/incoming-communication-barring&gt;&lt;outgoing-communication-barring active="true"&gt;&lt;cp:ruleset&gt;&lt;cp:rule id="BAOC"&gt;&lt;cp:conditions&gt;&lt;rule-deactivated/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;allow&gt;false&lt;/allow&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;cp:rule id="BOIC"&gt;&lt;cp:conditions&gt;&lt;international/&gt;&lt;rule-deactivated/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;allow&gt;false&lt;/allow&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;cp:rule id="BOICexHC"&gt;&lt;cp:conditions&gt;&lt;international-exHC/&gt;&lt;rule-deactivated/&gt;&lt;/cp:conditions&gt;&lt;cp:actions&gt;&lt;allow&gt;false&lt;/allow&gt;&lt;/cp:actions&gt;&lt;/cp:rule&gt;&lt;/cp:ruleset&gt;&lt;/outgoing-communication-barring&gt;&lt;/complete-communication-barring&gt;&lt;complete-conference&gt;&lt;operator-conference authorized="true"/&gt;&lt;/complete-conference&gt;&lt;/MMTelServices&gt;</asData>
+				<aliasId>VoLTEVoWifiMultisim1</aliasId>
+			</valueObject>
+		</modification>
+		
+	</request>

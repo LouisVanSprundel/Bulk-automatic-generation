@@ -1,0 +1,273 @@
+.lien_retour {
+  padding-right: 10px;
+}
+
+#theme { 
+  color: #333;
+  font-family: Arial, Verdana, Charcoal, Geneva, "Luxi Sans", sans-serif;
+  font-size: 12px;
+  margin: 10px 10px 10px 10px;
+  padding: 0px 0px 0px 0px;
+}
+
+#nav { 
+  float: left;
+  width: 140px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  position: left;
+}
+
+#nav ul {
+  list-style-type: none;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+#nav li { 
+  background-image: url('../images/link.gif'); 
+  background-position: left; 
+  background-repeat: no-repeat; 
+  margin: 0px 0px 0px 10px;
+  padding: 0px 0px 0px 14px;
+}
+
+div.blocseparator{
+  border-color: #AAAAAA;
+  border-width: 1px 0px 0px 0px;
+  border-style: solid none none none;
+  margin: 5px 0px 5px 0px;
+  padding: 0px 0px 0px 0px;
+  clear: both;
+  display: block;
+}
+
+#corps { 
+  background-color: white;
+  border-left: solid 3px #ff8800;
+  margin: 0px 12px 0px 150px;
+  padding: 15px 0px 15px 15px;
+  min-height: 600px;
+}
+
+#pied { 
+  font-size: smaller;
+  border-top: solid 3px #ff8800;
+  margin: 0px 0px 0px 0px;
+  padding: 13px 0px 5px 0px;
+  clear: both;
+  text-align: center;
+  position : relative;
+}
+
+.normalRow {
+  background-color: white;
+}
+.alternateRow {
+  background-color: #e5e5e5;
+}
+
+/*
+ *  * Généralités
+ *   */
+
+/* Liens */
+
+a { text-decoration: none; }
+
+a:link { color: black; }   /* lien non encore visité */
+
+a:visited { color: black; } /* lien visité */
+
+a:hover {  /* lien survolé par le curseur de la souris */
+  color: #ff6600;
+  text-decoration: underline; 
+}
+
+
+/* Hiérarchisation : titres, sous-titres */
+
+h1 { 
+  color: #ff6600;
+  font: bold 250% Arial, "Trebuchet MS", Verdana, sans-serif;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 30px 15px;
+} 
+
+h2 {
+  background-color: #ff6600;
+  font: normal 140% Arial, "Trebuchet MS", Verdana, sans-serif;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+} 
+
+/* Titre dans le menu de navigation */
+h3 {
+  background-image: url('../images/menu.gif'); 
+  background-position: left; 
+  background-repeat: no-repeat; 
+  font: bold 140% Arial, "Trebuchet MS", Verdana, sans-serif;
+  margin: 15px 0px 4px 0px;
+  padding: 0px 0px 0px 17px;
+  
+  /*text-align: center; */
+}
+
+h3 .orange{
+color: #ff6600;
+}
+
+/* Sous titre dans le menu de navigation */
+h4 {
+  background-image: url('../images/menu.gif'); 
+  background-position: left, top; 
+  background-repeat: no-repeat; 
+  font: bold 100% Arial, "Trebuchet MS", Verdana, sans-serif;
+  margin: 0px 0px 4px 0px;
+  padding: 0px 0px 0px 17px;
+}
+
+h4 a:hover {  /* lien survolé par le curseur de la souris */
+  color: #ff6600;
+  text-decoration: underline; 
+}
+
+h5 { 
+  font: italic 110% Arial, "Trebuchet MS", Verdana, sans-serif;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 10px;
+}
+
+h6 { 
+  font: italic 110% Arial, "Trebuchet MS", Verdana, sans-serif;
+  margin: 0px 0px 0px 40px;
+  padding: 0px 0px 0px 10px;
+}
+
+/* Texte */
+
+p { 
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 1px 1px;
+ /* margin-right: 0;
+ *   padding-left: 1px;
+ *     text-align: justify;*/
+}
+
+blockquote p { 
+  color: #cd853f;
+  font-size: 90%;
+}
+
+code {
+  font-family: monospace; /* code informatique */
+}
+
+/* Images */
+
+img { 
+  border-width: 0; /* pas de bordure sur les images */
+}
+
+/* Tableaux */
+
+table { 
+  border: solid 1px black;
+  border-collapse: collapse;
+}
+
+table th {
+  font-size: 90%;
+  border: solid 1px black;
+  margin: 0px 0px 0px 0px;
+  padding: 4px 3px 4px 3px;
+}
+
+table td {
+  font-size: 90%;
+  border: solid 1px black;
+  margin: 0px 0px 0px 0px;
+  padding: 1px 2px 1px 2px;
+  text-align : right;
+  white-space: nowrap;
+}
+
+th {  
+  font-weight: bold; 
+  background: #F7E2B9;
+  color: #5177C1;
+}
+
+th a:hover { 
+  background: #5177C1;
+  color: #ff6600;
+  text-decoration: none;
+}
+
+th a.linkOn { 
+  font-weight: bold;
+}
+
+th a.linkOn:hover{ 
+}
+
+/* Info bulle */
+th a.info {
+  position: relative;
+  color: #5177C1;
+  text-decoration: none;
+}
+
+a.info span {
+  display: none; /* on masque l'infobulle */
+}
+
+a.info:hover {
+  color: black;
+  background: none; /* correction d'un bug IE */
+  z-index: 500; /* on définit une valeur pour l'ordre d'affichage */
+  cursor: help; /* on change le curseur par défaut en curseur d'aide */
+}
+
+a.info:hover span {
+  display: inline; /* on affiche l'infobulle */
+  position: absolute;
+  top: 20px; /* on positionne notre infobulle */
+  left: -100px;
+  width: 150px; 
+  text-align: left;
+  background: #F7E2B9;
+  color: black;
+  padding: 2px 4px 2px 4px;
+  border: 1px solid black;
+}
+rainbow {
+  background-position: left;
+  background-repeat: no-repeat;
+  font: bold 140% Arial, "Trebuchet MS", Verdana, sans-serif;
+  margin: 15px 0px 4px 0px;
+  padding: 0px 0px 0px 17px;
+  color: #ff6600;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
+
+caption { 
+  font-size: 120%;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1em;
+}
+
+/* Lexiques */
+
+dt {   
+  font-weight: bold;
+  padding-bottom: .5em; 
+}
+
+dd {   
+  padding-bottom: 1.5em; 
+}
+

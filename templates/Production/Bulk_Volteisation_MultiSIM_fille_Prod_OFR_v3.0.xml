@@ -1,0 +1,152 @@
+<request xsi:type="spml:ModifyRequest">
+			<version>SUBSCRIBER_v10</version>
+			<objectclass>Subscriber</objectclass>
+			<identifier>[UIDFILLE]</identifier>
+
+			<modification name="hlr/cfd" operation="remove">
+			</modification>
+			<modification name="hlr/cfu" operation="remove">
+			</modification>
+			<modification name="hlr/cfnrc" operation="remove">
+			</modification>
+			<modification name="hlr/cfb" operation="remove">
+			</modification>
+			<modification name="hlr/cfnry" operation="remove">
+			</modification>
+			<modification name="hlr/mpty" operation="remove">
+			</modification>		
+			<modification name="hlr/tcsi" operation="remove">
+			</modification>
+
+			<modification operation="add" scope="uniqueTypeMapping">
+				<valueObject xsi:type="subscriber:PDPContext">
+					<id>7</id>
+					<qosProfile>QOSI3601</qosProfile>
+					<refPdpContextName>6001</refPdpContextName>
+				</valueObject>
+			</modification>
+			<modification operation="add" scope="uniqueTypeMapping">
+				<valueObject xsi:type="subscriber:PDPContext">
+					<id>8</id>
+					<qosProfile>QOSI3601</qosProfile>
+					<refPdpContextName>6012</refPdpContextName>
+				</valueObject>
+			</modification>
+			<modification operation="add" scope="uniqueTypeMapping">
+				<valueObject xsi:type="subscriber:PDPContext">
+					<id>9</id>
+					<qosProfile>QOSI3601</qosProfile>
+					<refPdpContextName>6013</refPdpContextName>
+				</valueObject>
+			</modification>
+
+			<modification operation="set" scope="uniqueTypeMapping">
+				<match xsi:type="subscriber:OCSI">
+					<operatorServiceName>27SHR</operatorServiceName>
+				</match>
+				<valueObject xsi:type="subscriber:OCSI">
+					<operatorServiceName>136MSIM1</operatorServiceName>
+					<csiState>1</csiState>
+					<csiNotify>2</csiNotify>
+				</valueObject>
+			</modification>
+
+			<modification operation="add" scope="uniqueTypeMapping">
+				<valueObject xsi:type="xs:string">
+					<commonMSISDN>[MSISDNMERE]</commonMSISDN>
+				</valueObject>
+			</modification>
+			
+			<modification operation="add" scope="uniqueTypeMapping">
+				<valueObject xsi:type="xs:boolean">
+					<overrideCommonCLI>false</overrideCommonCLI>
+				</valueObject>
+			</modification>
+		
+			<modification operation="set" scope="uniqueTypeMapping">
+				<valueObject xsi:type="subscriber:EPS">
+					<sessionTransferNumber>33654490100</sessionTransferNumber>
+					<accessAPNEnabled>true</accessAPNEnabled>
+				</valueObject>
+			</modification>
+			<modification operation="add" scope="uniqueTypeMapping">
+				<valueObject xsi:type="subscriber:EPSPdnContext">
+					<apn>ims</apn>
+					<contextId>7</contextId>
+					<type>ipv4</type>
+					<pdnGwDynamicAllocation>true</pdnGwDynamicAllocation>
+					<vplmnAddressAllowed>false</vplmnAddressAllowed>
+					<maxBandwidthUp>384000</maxBandwidthUp>
+					<maxBandwidthDown>384000</maxBandwidthDown>
+					<qos>56DE1</qos>
+					<pdnContextBlocking>
+						<flagAPNBlockedOverS6a>false</flagAPNBlockedOverS6a>
+						<flagAPNBlockedOverSWx>false</flagAPNBlockedOverSWx>
+					</pdnContextBlocking>
+				</valueObject>
+			</modification>
+			<modification operation="add" scope="uniqueTypeMapping">
+				<valueObject xsi:type="subscriber:EPSPdnContext">
+					<apn>ims2</apn>
+					<contextId>8</contextId>
+					<type>ipv4</type>
+					<pdnGwDynamicAllocation>true</pdnGwDynamicAllocation>
+					<vplmnAddressAllowed>false</vplmnAddressAllowed>
+					<maxBandwidthUp>384000</maxBandwidthUp>
+					<maxBandwidthDown>384000</maxBandwidthDown>
+					<qos>56DE1</qos>
+					<pdnContextBlocking>
+						<flagAPNBlockedOverS6a>false</flagAPNBlockedOverS6a>
+						<flagAPNBlockedOverSWx>false</flagAPNBlockedOverSWx>
+					</pdnContextBlocking>
+				</valueObject>
+			</modification>
+						<modification operation="add" scope="uniqueTypeMapping">
+				<valueObject xsi:type="subscriber:EPSPdnContext">
+					<apn>ims3</apn>
+					<contextId>9</contextId>
+					<type>ipv4</type>
+					<pdnGwDynamicAllocation>true</pdnGwDynamicAllocation>
+					<vplmnAddressAllowed>false</vplmnAddressAllowed>
+					<maxBandwidthUp>384000</maxBandwidthUp>
+					<maxBandwidthDown>384000</maxBandwidthDown>
+					<qos>56DE1</qos>
+					<pdnContextBlocking>
+						<flagAPNBlockedOverS6a>false</flagAPNBlockedOverS6a>
+						<flagAPNBlockedOverSWx>false</flagAPNBlockedOverSWx>
+					</pdnContextBlocking>
+				</valueObject>
+			</modification>
+			<modification operation="add" scope="uniqueTypeMapping">
+				<valueObject xsi:type="subscriber:EPSPdnContext">
+					<apn>sos</apn>
+					<contextId>10</contextId>
+					<type>ipv4</type>
+					<pdnGwDynamicAllocation>true</pdnGwDynamicAllocation>
+					<vplmnAddressAllowed>false</vplmnAddressAllowed>
+					<maxBandwidthUp>384000</maxBandwidthUp>
+					<maxBandwidthDown>384000</maxBandwidthDown>
+					<qos>86DD182</qos>
+					<pdnContextBlocking>
+						<flagAPNBlockedOverS6a>false</flagAPNBlockedOverS6a>
+						<flagAPNBlockedOverSWx>false</flagAPNBlockedOverSWx>
+					</pdnContextBlocking>
+				</valueObject>
+			</modification>
+			<modification operation="add" scope="uniqueTypeMapping">
+				<valueObject xsi:type="subscriber:EPSPdnContext">
+					<apn>vowifiorange</apn>
+					<contextId>11</contextId>
+					<type>ipv4</type>
+					<pdnGwDynamicAllocation>true</pdnGwDynamicAllocation>
+					<vplmnAddressAllowed>false</vplmnAddressAllowed>
+					<maxBandwidthUp>150000000</maxBandwidthUp>
+					<maxBandwidthDown>600000000</maxBandwidthDown>
+					<qos>86DD181</qos>
+					<pdnContextBlocking>
+						<flagAPNBlockedOverS6a>true</flagAPNBlockedOverS6a>
+						<flagAPNBlockedOverSWx>false</flagAPNBlockedOverSWx>
+					</pdnContextBlocking>
+				</valueObject>
+			</modification>
+	</request>

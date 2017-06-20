@@ -1,0 +1,3 @@
+<spml:batchRequest language="en_us" execution="synchronous" processing="parallel" xmlns:spml="urn:siemens:names:prov:gw:SPML:2:0" xmlns:subscriber="urn:siemens:names:prov:gw:SUBSCRIBER:1:0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" onError="resume">
+	<version>SUBSCRIBER_v10</version> 
+
